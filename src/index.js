@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Routes from './Routes/Routes';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+import 'rsuite/dist/rsuite.min.css';
+import './index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,20 +1,19 @@
 import React from "react";
-import "./styles.css";
-import { socials } from "../../Configs/Socials"
-import { IconButton } from "rsuite";
-const Home = () =>{
+import { socials } from "../../Configs/Socials";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import "./styles.scss";
+
+const Socials = () =>{
     return(
-        <div>
+        <div className="socials-container">
             {socials.map((s,i)=>(
-                <IconButton style={{
-                    backgroundColor:"red",
-                    marginRight:2
-                }}>
-                    {s.name}
-                </IconButton>
+                <button key={s.id} className="btn-socials" onClick={()=>window.open(s.url, "__blank")} target="_blank">
+                    <FontAwesomeIcon icon={s.logo} color={s.color} size="3x"/>
+                </button>
             ))}
         </div>
     )
 }
 
-export default Home;
+export default Socials;
