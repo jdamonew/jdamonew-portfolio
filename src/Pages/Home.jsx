@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Row, Col, Button } from "rsuite";
+import { Grid, Row, Col } from "rsuite";
 import Logo from "../Components/Logo"
 import Socials from "../Components/Socials";
 import "../Styles/Home.scss";
