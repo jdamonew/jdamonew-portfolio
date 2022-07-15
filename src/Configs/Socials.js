@@ -1,0 +1,30 @@
+export const socials = [
+    {
+        id:1,
+        name:"Github",
+        logo:"",
+        color:"",
+        url:""
+    },
+    {
+        id:2,
+        name:"LinkedIn",
+        logo:"",
+        color:"",
+        url:""
+    },
+    {
+        id:3,
+        name:"Instagram",
+        logo:"",
+        color:"",
+        url:""
+    },
+    {
+        id:4,
+        name:"Spotify",
+        logo:"",
+        color:"",
+        url:""
+    }
+]
