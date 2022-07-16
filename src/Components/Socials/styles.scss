@@ -27,3 +27,12 @@
 
     }
 }
+
+@media screen and (max-width: 390px) {
+    .socials-container {
+        .btn-socials {
+            margin: 0 8px;
+            margin-top: 30px;
+        }
+    }
+}
