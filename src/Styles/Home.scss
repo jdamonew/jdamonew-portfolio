@@ -1,9 +1,8 @@
-
-
+@import "../Configs/ColorsDefault.scss";
 
 .grid-home{
     padding: 20px 35px;
-    background-color:#333333;
+    background-color:$system;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -25,7 +24,7 @@
         //text-align: center;
         
         .home-msg{
-            color:#f8f8f8;
+            color:$white-default;
         }
         
     }
@@ -37,7 +36,7 @@
         justify-content: center;
     
         span{
-            color:#F14040;
+            color:$red-default;
         }
     
     }                                                                           

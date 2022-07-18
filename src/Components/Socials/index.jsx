@@ -1,7 +1,6 @@
 import React from "react";
-import { socials } from "../../Configs/Socials";
+import { socials } from "../../Configs/Params";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./styles.scss";
 
 const Socials = () =>{
