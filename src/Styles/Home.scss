@@ -1,43 +1,8 @@
-@import "../Configs/ColorsDefault.scss";
-
 .grid-home{
     padding: 20px 35px;
     background-color:$system;
     height: 100vh;
     overflow: hidden;
     display: flex;
-    //align-items: center;
-    //justify-content: center;
     flex-direction: column;
-    
-    .header-row-home{
-        height: 20%;
-        
-    }
-    
-    .body-row-home{
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        //text-align: center;
-        
-        .home-msg{
-            color:$white-default;
-        }
-        
-    }
-    
-    .footer-row-home{
-        height: 20%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-    
-        span{
-            color:$red-default;
-        }
-    
-    }                                                                           
 }
