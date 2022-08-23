@@ -1,5 +1,5 @@
 import React from "react";
-import { socials } from "../../Configs/Socials";
+import { socials } from "../../Configs/Params";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.scss";
 

@@ -1,0 +1,9 @@
+$red-default: #F14040;    
+$system: #333333;  
+$white-default: #f8f8f8;
+
+:export {
+    turivius: $red-default;
+    turivius_light: $system;
+    turivius_dark: $white-default;
+}
