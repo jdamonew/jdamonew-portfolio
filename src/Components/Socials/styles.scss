@@ -15,10 +15,20 @@
         background-color: transparent;
         transition: .3s linear ;
 
+        &.dark-mode{
+            svg{
+                color:$white-default;
+            }
+        }
+        
+        &.light-mode{
+            svg{
+                color:$system;
+            }
+        }
+
         &:hover{
             transform: scale(1.5);
-            // padding: 10px;
-            // border-radius: 50px;
 
             svg{
                 color: $red-default;

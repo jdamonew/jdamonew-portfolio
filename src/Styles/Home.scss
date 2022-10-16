@@ -1,8 +1,17 @@
+@import "../index.scss";
+
 .grid-home{
     padding: 20px 35px;
-    background-color:$system;
     height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: .3s;
+    
+    &.dark-mode{
+        background-color:$system;
+    }
+    &.light-mode{
+        background-color:$white-default;
+    }
 }

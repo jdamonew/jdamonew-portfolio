@@ -1,24 +1,33 @@
 import React from "react";
-import "./styles.scss";
 import PropTypes from "prop-types"
+import { connect } from "react-redux";
+import "./styles.scss";
 
-const Home = ({size}) =>{
+const Logo = ({size, toggleMode}) =>{
     return(
-        <React.Fragment>
-            <h1 className="title-logo-top" style={{fontSize:size}}>jóbia</h1>
-            <h1 className="title-logo-bottom" style={{fontSize:size}}>damone
+        <div>
+            <h1 className={`title-logo-top ${toggleMode?"dark-mode":"light-mode"}`} style={{fontSize:size}}>jóbia</h1>
+            <h1 className={`title-logo-bottom ${toggleMode?"dark-mode":"light-mode"}`} style={{fontSize:size}}>damone
                 <span>.</span>
             </h1>
-        </React.Fragment>
+        </div>
     )
 }
 
-Home.propTypes = {
+Logo.propTypes = {
     size:PropTypes.number,
 }
 
-Home.defaultProps = {
+Logo.defaultProps = {
     size: 40
 }
 
-export default Home;
+const mapStateToProps = (state) => ({
+    toggleMode: state.systemSettings.toggleMode,
+});
+
+
+export default connect(
+    mapStateToProps,
+    {})
+    (Logo);
