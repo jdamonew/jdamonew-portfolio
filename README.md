@@ -1,70 +1,9 @@
-# Getting Started with Create React App
+![Sign-In with Ethereum logo](https://lh3.googleusercontent.com/dVIBD0H6Vo2YbqP8gxNClRRP5ptkk9fUDg5dy7h98CbrGgfE2rP49aQJ1mow9eUijgwj2-9kMGbQS95iSruvR-pKZu9lqTj0aA2pF01zBxzcUA6Qr_5JCh_9fMEsu6VbMcRRbW-avMEQTs7nemzOL32vEc-94Kot-G4JF0iXZLXK6TwNPinRxcPPuivMYFMxp4bMF1MuwhLFWSwR8rnuftjmCqwze8OvGqWt16AoYgqwQR_GGOeMhH1uJms_lF-TTlexny-YSkyRYOTmwaKsMBqqXcqQL2MDk9Cus-5dtbqWKWwxkinnc82XIdZKtJCbKpChvDq5jLLBpMUuP21XHxftl7OBRDljlFre11PLYx4TNBrEB-700d60AvHl1-iDFFHtUtEeH43TPEy7XvxWSn0p9tFOU1WO81T1xydl2WwReWpYmZBlZ82n_0QWtUOjFtoeSwYNz70oLNcTlDFESvVJcyNAw9YSaBe2e6y31x9AMUstsbZsmEKo5b7XWz90-3w8RQALpJVUlwGzr3iFYkEb7ASZhuwvClznaqd1zBEUao7D6TSglvQp11nuQUd-JGz6sakROrwCUlgNJFU1ilz55u6HRnYFx3IiJHDDi_Fo-rRl3jHf74G3rQIlw5mKWpOVujzCkGlF7zJLJe2UyoOdokRcr1gS60LGqz-7U3zTdZtKnOLf2s3-kf06F25h38Ci0UR3aYODSdNJ5xNX1SEIPDmcvNzSDSa7Q57TQ_DXPITz2zyyBRmPEk3XwAuSdY16w3v9dNzwYxfCjJlv4VjPTHDu0-Rs2BW8tD_5QNE_4IzT2d2j7rVjHS-X_BWTDbSIOz0hL8Z_LEuavsd8v1er2PmyF4ky8Sa1B1SH1EULv8kwOFVAk1Tz5Rw3GX7AJuxqQMfYfwsS9IOue44tynY6HzP37fjxiD6luWYKlt6BOA=w1193-h601-no?authuser=0 "Jobia's Banner")
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to my workspace ![USA](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36/country-4x3/us.png "USA")
+Welcome to my portfolio project. It's not ready yet, I have a lot of work to do around here, but come check out what we already have here.
+Click [here](https://www.damone.dev/) to access my site
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Bem-vinde ao meu espaço de trabalho ![Brazil](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36/country-4x3/br.png "Brazil")
+Bem-vindo ao meu projeto de portfólio. Ainda não está pronto, tenho muito trabalho para fazer por aqui, mas vem conferir o que já temos aqui.
+Clique [aqui](https://www.damone.dev/) para acessa meu site.
