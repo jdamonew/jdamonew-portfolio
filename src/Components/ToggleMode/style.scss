@@ -1,0 +1,63 @@
+@import "../../Configs/ColorsDefault.scss";
+
+.toggle-container{
+    position: relative;
+    display: inline-flex;
+    width: 60px;
+    height: 30px;
+
+    .toggle{
+        opacity:0;
+        width: 0;
+        height: 0;   
+        
+        &:checked + .slide{
+            background-color: $red-default;
+        }
+        &:checked + .slide::before{
+            transform: translateX(25px);
+            background-color: $system ;
+        }
+    }
+
+    .slide{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        cursor: pointer;
+        background-color: $system;
+        border-radius: 4px;
+        transition: .4s;
+        -webkit-transition: .4s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        color: $white-default;
+        
+        &::before{
+            content: "";
+            top: 5px;
+            left: 5px;
+            position: absolute;
+            width: 25px;
+            height: 20px;
+            background-color: $red-default;
+            border-radius: 4px;
+            transition: .4s;
+            -webkit-transition: .4s;
+        }
+    }
+
+    
+
+    // .toggle:checked + .slide:before {
+    //     -webkit-transform: translateX(26px);
+    //     -ms-transform: translateX(26px);
+    //     transform: translateX(26px);
+    //   }
+      
+
+}
