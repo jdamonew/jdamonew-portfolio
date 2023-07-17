@@ -1,13 +1,19 @@
 import React from "react";
 import Logo from "../Logo"
-import "../../Styles/Header.scss";
 import ToggleMode from "../ToggleMode";
+import "../../Styles/Header.scss";
+import SelectLanguage from "../SelectLanguage";
 
 const Header = () => {
     return (
         <header className="header-row-home">
             <Logo />
-            <ToggleMode/>
+            
+            <div className="header-row-home_options">
+                <SelectLanguage/>
+                <ToggleMode/>
+            </div>
+
         </header>
     )
 }
