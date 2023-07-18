@@ -1,0 +1,18 @@
+@import "../../Configs/ColorsDefault.scss";
+
+.button{
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15PX;
+
+    
+    &.default{        
+        background-color: $red-default;
+        color: white;
+    }
+
+}

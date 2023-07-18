@@ -1,19 +1,21 @@
-import React from "react";
-import Socials from "../Socials";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import { homeTexts } from "../../Configs/TranslatePackage";
 import "../../Styles/Body.scss";
+import AboutMe from "../../Pages/AboutMe";
 
-const Body = ({toggleMode}) => {
+const Body = ({ toggleMode, language }) => {
+
     return (
         <div className="body-row-home">
-            <h2 className={`home-msg ${toggleMode?"dark-mode":"light-mode"}`}>coming soon...</h2>
-            <Socials />
+            <AboutMe/>
         </div>
 
     )
 }
 const mapStateToProps = (state) => ({
     toggleMode: state.systemSettings.toggleMode,
+    language: state.systemSettings.language,
 });
 
 

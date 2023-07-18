@@ -2,8 +2,7 @@ import React from "react";
 import { Creators as SystemSettingsActions } from "../../Store/ducks/systemSettings";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { Moon, Sun1 } from "iconsax-react";
 import "./style.scss";
 
 const ToggleMode = (props) => {
@@ -21,8 +20,16 @@ const ToggleMode = (props) => {
                 checked={props.toggleMode}
             />
             <span className="slide">
-             <FontAwesomeIcon icon={faMoon}/>
-             <FontAwesomeIcon icon={faSun}/>
+            <Moon
+                size="16"
+                color="#FFFFFF"
+                variant="Broken"
+                />
+             <Sun1
+             size="16"
+             color="#FFFFFF"
+             variant="Broken"
+             />
             </span>
         </label>
     )

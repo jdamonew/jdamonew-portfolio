@@ -1,0 +1,31 @@
+@import "../../Configs/ColorsDefault.scss";
+
+
+.language-contente{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 0 5px;
+    border-radius: 4px;
+    background-color: $red-default;
+
+    .select-container{
+        // position: relative;
+        // display: inline-flex;
+        width: 90px;
+        height: 30px;
+        border-radius: 4px;
+        border: none;
+        background-color: $red-default;
+        color: white;
+        // padding: 10px 15px;
+        
+        &:focus-visible{
+            outline: none;
+        }
+    
+    }
+
+}
