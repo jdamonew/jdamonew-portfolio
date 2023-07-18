@@ -3,13 +3,17 @@ import Socials from "../Socials";
 import { connect } from "react-redux";
 import { homeTexts } from "../../Configs/TranslatePackage";
 import "../../Styles/Body.scss";
+import AboutMe from "../../Pages/AboutMe";
 
-const Body = ({toggleMode, language}) => {
-    
+const Body = ({ toggleMode, language }) => {
+
     return (
         <div className="body-row-home">
-            <h2 className={`home-msg ${toggleMode?"dark-mode":"light-mode"}`}>{homeTexts[language].message}</h2>
-            <Socials />
+            <AboutMe/>
+            {/* <h2 className={`home-msg ${toggleMode ? "dark-mode" : "light-mode"}`}>
+                {homeTexts[language].message}
+            </h2>
+            <Socials /> */}
         </div>
 
     )

@@ -1,0 +1,15 @@
+@import "../../Configs/ColorsDefault.scss";
+
+.tag{
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    
+    &.default{        
+        background-color: $red-default;
+        color: white;
+    }
+
+}
