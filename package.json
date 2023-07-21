@@ -16,6 +16,7 @@
     "iconsax-react": "^0.0.8",
     "less": "^4.1.3",
     "less-loader": "7",
+    "posthog-js": "^1.73.1",
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
