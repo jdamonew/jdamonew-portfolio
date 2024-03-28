@@ -1,12 +1,7 @@
-import React from 'react'
-import "../../Styles/Components/_tag.scss";
+import React from "react";
 
-const Tag = ({ text = "default", appearance="default" }) => {
-  return (
-    <span className={`tag ${appearance}`}>
-      {text}
-    </span>
-  )
-}
+const Tag = ({ text = "default", appearance = "default" }) => {
+  return <span className={`tag ${appearance}`}>{text}</span>;
+};
 
-export default Tag
+export default Tag;

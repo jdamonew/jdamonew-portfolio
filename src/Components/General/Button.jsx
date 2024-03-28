@@ -1,20 +1,12 @@
-import React from 'react'
-import "../../Styles/Components/_button.scss";
-import { ArrowRight2 } from 'iconsax-react';
+import React from "react";
+import { ArrowRight2 } from "iconsax-react";
 
-const Button = ({title, onClick, appearence="default"}) => {
+const Button = ({ children, onClick, appearence = "default" }) => {
   return (
     <button className={`button ${appearence}`} onClick={onClick}>
-      <span>
-        {title}
-      </span>
-      <ArrowRight2
-        size="20"
-        color="#FFF"
-        variant="Broken"
-      />
+      {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

@@ -1,0 +1,67 @@
+// @import "../index.scss";
+
+.grid-home{
+    padding: 20px 35px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+    
+    &.dark-mode{
+        background-color:$system;
+    }
+    &.light-mode{
+        background-color:$white-default;
+    }
+    
+    .header-row-home{
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        &_options{
+            display: flex;
+            // flex-direction: column;
+            align-items: end;
+            gap: 10px;
+        }
+    
+    
+    }
+    
+    .body-row-home{
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        .home-msg{
+    
+            &.dark-mode{
+                color:$white-default;
+            }
+            
+            &.light-mode{
+                color:$red-default;
+            }
+        }
+        
+    }
+    
+    .footer-row-home{
+        height: 20%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    
+        span{
+            color:#F14040;
+        }
+    
+    }  
+}
+
+    

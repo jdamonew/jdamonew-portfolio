@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Routes from './Routes/Routes';
-import reportWebVitals from './reportWebVitals';
-import 'rsuite/dist/rsuite.min.css';
-import './index.scss';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Routes from "./routes/routes";
+import reportWebVitals from "./reportWebVitals";
+import "rsuite/dist/rsuite.min.css";
+import "./index.scss";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Routes />
