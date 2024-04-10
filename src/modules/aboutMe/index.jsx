@@ -2,10 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { aboutMeTexts } from "../../configs/TranslatePackage";
 import Tag from "../../components/General/Tag";
-import Button from "../../components/General/Button";
 import ImageBlob from "../../components/ImageBlob";
 import Socials from "../../components/Socials";
-import { ArrowRight2 } from "iconsax-react";
+import ModalContact from "../../components/ModalContact";
 
 const AboutMe = ({ toggleMode, language }) => {
   return (
@@ -23,10 +22,10 @@ const AboutMe = ({ toggleMode, language }) => {
           {aboutMeTexts[language].subTitle}
         </span>
         <p className="about-me-text">{aboutMeTexts[language].text}</p>
-        <Button>
-          <span>{aboutMeTexts[language].modal}</span>
-          <ArrowRight2 size="20" color="#FFF" variant="Broken" />
-        </Button>
+        <ModalContact
+          text={aboutMeTexts[language].modal}
+          data={aboutMeTexts[language]}
+        />
       </div>
       <div
         className={`about-me-contente ${

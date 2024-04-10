@@ -1,0 +1,45 @@
+dialog {
+    border: none;
+    border-radius: 4px;
+
+    &::backdrop {
+        background-color: #0000008c;
+    }
+}
+
+.modal-container {
+    width: 500px;
+    padding: 16px 25px 25px 25px;
+
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_body {
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &_item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                 a{
+                    font-size: 16px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    color: $system;
+                    text-decoration: none;
+
+                    &:hover{
+                        text-decoration: none;
+                    }
+                 }
+            }
+        }
+    }
+}
