@@ -14,5 +14,4 @@ const FloatingMenu = ({ onClick }) => (
         </button>
     </div>
 );
-
 export default FloatingMenu;
