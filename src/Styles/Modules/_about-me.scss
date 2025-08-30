@@ -1,0 +1,79 @@
+@import "../../Configs/ColorsDefault.scss";
+
+.about-me-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s; 
+
+     @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    &_texts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        ;
+
+        .about-me-subtitle{
+            color: $base-color;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .about-me-text{
+            padding: 0 70px 0 0;
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+    
+    .dark-mode{
+        &.texts{
+            .about-me-text, .about-me-title{
+                color: white;
+            }
+        }
+        
+    } 
+    
+    .light-mode{
+        &.texts{
+            .about-me-text, .about-me-title{
+                color: #333;
+            }
+            
+        }
+        
+        
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .about-me-content{
+        margin-top: 50px;
+        flex-direction: column-reverse;
+        gap: 40px;
+        &_texts{
+            .about-me-subtitle{
+                    font-size: 25px;
+                }
+        }
+    }
+}

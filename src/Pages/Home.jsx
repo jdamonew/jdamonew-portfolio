@@ -1,20 +1,15 @@
-import React from "react";
-import { connect } from "react-redux";
-
-//Compoenents
 import Header from "../Components/Header"
 import Body from "../Components/Body";
 import Footer from "../Components/Footer";
+import { connect } from "react-redux";
 
-//Settings
-import "../Styles/Home.scss";
-
-const Home = ({toggleMode}) => {
+const Home = ({ toggleMode }) => {
     return (
-        <div className={`grid-home ${!toggleMode ? "light-mode":"dark-mode"}`} >
-            <Header/>
-            <Body/>
-            <Footer/>
+        <div className='grid-home'>
+            <div className={`grid-home bg ${!toggleMode ? "light-mode" : "dark-mode"}`}></div>
+            <Header />
+            <Body />
+            <Footer />
         </div>
 
     )

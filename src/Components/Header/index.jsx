@@ -1,21 +1,48 @@
-import React from "react";
-import Logo from "../Logo"
+import { useEffect, useState } from "react";
 import ToggleMode from "../ToggleMode";
-import "../../Styles/Header.scss";
 import SelectLanguage from "../SelectLanguage";
+import { aboutMeTexts } from "../../Configs/TranslatePackage";
+import { connect } from "react-redux";
 
-const Header = () => {
+const Header = ({ language }) => {
+    const [opacity, setOpacity] = useState(1);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const fadeOutPoint = 10; // altura até sumir
+            const newOpacity = Math.max(1 - scrollY / fadeOutPoint, 0);
+            setOpacity(newOpacity);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <header className="header-row-home">
-            <Logo />
-            
-            <div className="header-row-home_options">
-                <SelectLanguage/>
-                <ToggleMode/>
+        <header className="header-row-home" style={{ opacity }}>
+
+            <div className="header-container">
+                <h2>{aboutMeTexts[language].headerTitle}</h2>
+
+                <div className="header-row-home_options">
+                    <SelectLanguage />
+                    <ToggleMode />
+                </div>
             </div>
+
 
         </header>
     )
 }
 
-export default Header;
+const mapStateToProps = (state) => ({
+    toggleMode: state.systemSettings.toggleMode,
+    language: state.systemSettings.language,
+});
+
+
+export default connect(
+    mapStateToProps,
+    {})
+    (Header);

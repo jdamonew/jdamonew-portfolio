@@ -1,0 +1,21 @@
+/* PAGES */
+@import "./pages/Home";
+
+/* MODULES */
+@import "./modules/about-me";
+
+
+/* COMPONENTS */
+@import "./components/button";
+@import "./components/tag";
+@import "./components/modal";
+
+@import "./components/ImageBlob";
+@import "./components/Logo";
+@import "./components/Socials";
+@import "./components/Header";
+// @import "./components/SelectLanguage";
+// @import "./components/ToggleMode.scss";
+
+/* VARIABLES */
+@import "./variables/colors";

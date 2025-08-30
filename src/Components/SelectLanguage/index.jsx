@@ -3,19 +3,23 @@ import { Creators as SystemSettingsActions } from "../../Store/ducks/systemSetti
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { languagesOptions } from "../../Configs/TranslatePackage";
-
+import { useIsMobile } from "../../Hooks/useIsMobile";
+import { ChevronDown, Languages } from "lucide-react";
 import "./style.scss";
-import { LanguageSquare } from "iconsax-react";
 
 const SelectLanguage = (props) => {
+    const isMobile = useIsMobile(768);
+    const [open, setOpen] = React.useState(false);
 
-    return (
+    function changeLanguage(event) {
+        props.setLanguageSystem(event.value)
+    }
 
-        <div className="language-contente">
-            <LanguageSquare
+    return isMobile ?
+        <div className="language-content-mobile">
+            <Languages
                 size="20"
                 color="#fff"
-                variant="Broken"
             />
             <select
                 className="select-container"
@@ -31,9 +35,28 @@ const SelectLanguage = (props) => {
                     ))
                 }
             </select>
+        </div> :
+        <div className="language-content-desktop" onClick={() => setOpen(!open)}>
+            <div className="language-content-desktop_display">
+                <Languages size={20} color="#fff" />
+                <p>{languagesOptions[props.language].filter(item => item.value === props.language)[0].title}</p>
+                <ChevronDown size={20} color="#fff" />
+            </div>
+
+            {/* {open && */}
+            <div className={`language-content-desktop_options ${open ? "open" : ""}`}>
+                {
+                    languagesOptions[props.language].map(option => (
+                        <option onClick={() => changeLanguage(option)} value={option.value}>{option.title}</option>
+
+                    ))
+                }
+            </div>
+            {/* } */}
+
         </div>
 
-    )
+
 }
 
 const mapStateToProps = (state) => ({

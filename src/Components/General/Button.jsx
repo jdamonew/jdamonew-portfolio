@@ -2,17 +2,12 @@ import React from 'react'
 import "../../Styles/Components/_button.scss";
 import { ArrowRight2 } from 'iconsax-react';
 
-const Button = ({title, onClick, appearence="default"}) => {
+const Button = ({ children, onClick, appearence = "default", className, style }) => {
   return (
-    <button className={`button ${appearence}`} onClick={onClick}>
-      <span>
-        {title}
-      </span>
-      <ArrowRight2
-        size="20"
-        color="#FFF"
-        variant="Broken"
-      />
+    <button className={`button ${appearence} ${className}`} onClick={onClick} style={style} >
+
+      {children}
+
     </button>
   )
 }

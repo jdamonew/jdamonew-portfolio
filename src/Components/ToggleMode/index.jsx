@@ -1,35 +1,33 @@
-import React from "react";
 import { Creators as SystemSettingsActions } from "../../Store/ducks/systemSettings";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { Moon, Sun1 } from "iconsax-react";
+import { MoonIcon, Sun } from "lucide-react";
 import "./style.scss";
 
 const ToggleMode = (props) => {
 
-    const setToggle = () =>{
+    const setToggle = () => {
         props.setModeSystem()
     }
 
     return (
         <label className="toggle-container">
-            <input 
+            <input
                 className="toggle"
-                type="checkbox" 
+                type="checkbox"
                 onChange={setToggle}
                 checked={props.toggleMode}
             />
             <span className="slide">
-            <Moon
-                size="16"
-                color="#FFFFFF"
-                variant="Broken"
+                <MoonIcon
+                    size="18"
+                    color="#FFFFFF"
+                    variant="Broken"
                 />
-             <Sun1
-             size="16"
-             color="#FFFFFF"
-             variant="Broken"
-             />
+                <Sun
+                    size="18"
+                    color="#FFFFFF"
+                />
             </span>
         </label>
     )
@@ -40,7 +38,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) =>
-    bindActionCreators( SystemSettingsActions, dispatch);
+    bindActionCreators(SystemSettingsActions, dispatch);
 
 export default connect(
     mapStateToProps,
