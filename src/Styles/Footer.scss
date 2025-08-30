@@ -1,11 +1,30 @@
+      @import ".././Styles/Variables/colors";
+
     .footer-row-home{
         height: 20%;
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
     
         span{
-            color:#F14040;
+            color:$base-support;
+            font-weight: 700;
+            
+            &.light-mode{
+                color:$base-color;
+            }
+        }
+        
+        .link-github{
+            color:$white-default;
+            font-weight: 500;
+            text-decoration: none;
+
+            &.light-mode{
+                color:$system;
+            }
+            
         }
     
     }  

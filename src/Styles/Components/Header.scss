@@ -1,0 +1,43 @@
+    @import "../Variables/colors";
+
+    .header-row-home{
+        z-index: 9999;
+        border-radius: 99px;
+        width: 100%;
+        max-width: 1800px;
+        
+        .header-container{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            white-space: nowrap;   
+            
+            h2{
+                color: $base-color;
+            }
+        }
+
+        &_options{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 10px;
+            width: 100%;
+        }
+    }
+
+    
+
+
+    @media (max-width: 1000px) {
+    .header-row-home{
+        .header-container{
+            h2{
+                display: none;
+            }
+        }
+    }
+}
+
+    

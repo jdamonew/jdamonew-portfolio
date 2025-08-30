@@ -2,13 +2,16 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { homeTexts } from "../../Configs/TranslatePackage";
 import "../../Styles/Body.scss";
-import AboutMe from "../../Pages/AboutMe";
+import AboutMe from "../../Modules/AboutMe";
+
+import FloatingMenu from "../FloatingMenu";
 
 const Body = ({ toggleMode, language }) => {
 
     return (
         <div className="body-row-home">
-            <AboutMe/>
+            <AboutMe />
+            {/* <FloatingMenu /> */}
         </div>
 
     )
