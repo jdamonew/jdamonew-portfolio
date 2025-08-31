@@ -3,6 +3,7 @@ import ToggleMode from "../ToggleMode";
 import SelectLanguage from "../SelectLanguage";
 import { aboutMeTexts } from "../../Configs/TranslatePackage";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 const Header = ({ language }) => {
     const [opacity, setOpacity] = useState(1);
@@ -41,8 +42,10 @@ const mapStateToProps = (state) => ({
     language: state.systemSettings.language,
 });
 
+Header.propTypes = {
+    language: PropTypes.string.isRequired,
+};
 
 export default connect(
     mapStateToProps,
-    {})
-    (Header);
+    {})(Header);

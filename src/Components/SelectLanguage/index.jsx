@@ -5,14 +5,15 @@ import { connect } from "react-redux";
 import { languagesOptions } from "../../Configs/TranslatePackage";
 import { useIsMobile } from "../../Hooks/useIsMobile";
 import { ChevronDown, Languages } from "lucide-react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
-const SelectLanguage = (props) => {
+const SelectLanguage = ({ setLanguageSystem, language }) => {
     const isMobile = useIsMobile(768);
     const [open, setOpen] = React.useState(false);
 
     function changeLanguage(event) {
-        props.setLanguageSystem(event.value)
+        setLanguageSystem(event.value)
     }
 
     return isMobile ?
@@ -23,14 +24,14 @@ const SelectLanguage = (props) => {
             />
             <select
                 className="select-container"
-                value={props.language}
+                value={language}
                 onChange={(event) => {
-                    props.setLanguageSystem(event.target.value)
+                    setLanguageSystem(event.target.value)
                 }}
             >
                 {
-                    languagesOptions[props.language].map(option => (
-                        <option value={option.value}>{option.title}</option>
+                    languagesOptions[language].map(option => (
+                        <option key={option.value} value={option.value}>{option.title}</option>
 
                     ))
                 }
@@ -39,25 +40,33 @@ const SelectLanguage = (props) => {
         <div className="language-content-desktop" onClick={() => setOpen(!open)}>
             <div className="language-content-desktop_display">
                 <Languages size={20} color="#fff" />
-                <p>{languagesOptions[props.language].filter(item => item.value === props.language)[0].title}</p>
+                <p>{languagesOptions[language].filter(item => item.value === language)[0].title}</p>
                 <ChevronDown size={20} color="#fff" />
             </div>
 
-            {/* {open && */}
             <div className={`language-content-desktop_options ${open ? "open" : ""}`}>
                 {
-                    languagesOptions[props.language].map(option => (
-                        <option onClick={() => changeLanguage(option)} value={option.value}>{option.title}</option>
+                    languagesOptions[language].map(option => (
+                        <option
+                            key={option.value}
+                            onClick={() => changeLanguage(option)}
+                            value={option.value}
+                        >
+                            {option.title}
+                        </option>
 
                     ))
                 }
             </div>
-            {/* } */}
-
         </div>
 
 
 }
+
+SelectLanguage.propTypes = {
+    setLanguageSystem: PropTypes.func.isRequired,
+    language: PropTypes.string.isRequired
+};
 
 const mapStateToProps = (state) => ({
     language: state.systemSettings.language,
@@ -68,6 +77,5 @@ const mapDispatchToProps = (dispatch) =>
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps)
-    (SelectLanguage);
+    mapDispatchToProps)(SelectLanguage);
 

@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 const Logo = ({ toggleMode }) => {
     return (
@@ -13,12 +14,14 @@ const Logo = ({ toggleMode }) => {
     )
 }
 
+Logo.propTypes = {
+    toggleMode: PropTypes.bool.isRequired,
+};
+
 const mapStateToProps = (state) => ({
     toggleMode: state.systemSettings.toggleMode,
 });
 
-
 export default connect(
     mapStateToProps,
-    {})
-    (Logo);
+    {})(Logo);

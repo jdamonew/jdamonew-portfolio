@@ -4,6 +4,7 @@ import { X, AtSign, Linkedin, SquareArrowOutUpRight, MessageCircle } from "lucid
 import { contacts } from "../../Configs/Params";
 import Button from "../General/Button";
 import { Whatsapp } from "iconsax-react";
+import PropTypes from "prop-types";
 
 const ModalContact = ({ text, data }) => {
     const modalRef = useRef();
@@ -56,6 +57,13 @@ const ModalContact = ({ text, data }) => {
             </dialog>
         </>
     );
+};
+
+ModalContact.propTypes = {
+    text: PropTypes.string.isRequired,
+    data: PropTypes.shape({
+        modalMessage: PropTypes.string
+    }).isRequired
 };
 
 export default ModalContact;

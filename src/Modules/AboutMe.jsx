@@ -1,10 +1,9 @@
-
-import { connect } from "react-redux";
 import { aboutMeTexts } from "../Configs/TranslatePackage";
 import ImageBlob from '../Components/ImageBlob';
 import Socials from '../Components/Socials';
 import Logo from '../Components/Logo';
 import ModalContact from '../Components/ModalContact';
+import PropTypes from 'prop-types';
 
 const AboutMe = ({ toggleMode, language }) => {
     return (
@@ -26,15 +25,9 @@ const AboutMe = ({ toggleMode, language }) => {
         </div>
     )
 }
+AboutMe.propTypes = {
+    toggleMode: PropTypes.bool.isRequired,
+    language: PropTypes.string.isRequired,
+};
 
-
-const mapStateToProps = (state) => ({
-    toggleMode: state.systemSettings.toggleMode,
-    language: state.systemSettings.language,
-});
-
-
-export default connect(
-    mapStateToProps,
-    {})
-    (AboutMe);
+export default AboutMe;

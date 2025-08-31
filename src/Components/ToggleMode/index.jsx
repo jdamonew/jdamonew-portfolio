@@ -2,12 +2,13 @@ import { Creators as SystemSettingsActions } from "../../Store/ducks/systemSetti
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { MoonIcon, Sun } from "lucide-react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
-const ToggleMode = (props) => {
+const ToggleMode = ({ setModeSystem, toggleMode }) => {
 
     const setToggle = () => {
-        props.setModeSystem()
+        setModeSystem()
     }
 
     return (
@@ -16,7 +17,7 @@ const ToggleMode = (props) => {
                 className="toggle"
                 type="checkbox"
                 onChange={setToggle}
-                checked={props.toggleMode}
+                checked={toggleMode}
             />
             <span className="slide">
                 <MoonIcon
@@ -40,8 +41,12 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) =>
     bindActionCreators(SystemSettingsActions, dispatch);
 
+ToggleMode.propTypes = {
+    setModeSystem: PropTypes.func.isRequired,
+    toggleMode: PropTypes.bool.isRequired,
+};
+
 export default connect(
     mapStateToProps,
-    mapDispatchToProps)
-    (ToggleMode);
+    mapDispatchToProps)(ToggleMode);
 

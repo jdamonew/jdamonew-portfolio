@@ -1,15 +1,15 @@
 import React from "react";
 import './styles.scss';
 
-const FloatingMenu = ({ onClick }) => (
+const FloatingMenu = () => (
     <div className='floating-menu' aria-label="Menu Flutuante">
-        <button onClick={onClick} >
+        <button >
             1
         </button>
-        <button onClick={onClick} >
+        <button >
             2
         </button>
-        <button onClick={onClick} >
+        <button >
             3
         </button>
     </div>

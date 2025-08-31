@@ -10,7 +10,7 @@ const INITIAL_STATE = {
     language: "enUS"
 }
 
-const setModeSystem = (state = INITIAL_STATE, action) => {
+const setModeSystem = (state = INITIAL_STATE) => {
 
     return {
         ...state,

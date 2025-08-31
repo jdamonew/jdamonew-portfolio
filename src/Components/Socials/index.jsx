@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { socials } from "../../Configs/Params";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,12 +12,15 @@ const Socials = ({ toggleMode }) => {
             socialName: nameSocial,
             url: url
         })
-        return window.open(url, "__blank");
     }
+
+    Socials.propTypes = {
+        toggleMode: PropTypes.bool.isRequired,
+    };
 
     return (
         <div className='socials-container'>
-            {socials.map((s, i) => (
+            {socials.map((s) => (
                 <button
                     key={s.id}
                     className={`btn-socials ${toggleMode ? "dark-mode" : "light-mode"}`}
@@ -35,6 +39,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
-    {})
-    (Socials);
+    {})(Socials);
 
