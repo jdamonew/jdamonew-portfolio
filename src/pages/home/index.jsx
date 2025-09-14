@@ -1,10 +1,12 @@
-import React from "react";
+
 import { connect } from "react-redux";
 import Logo from "../../components/Logo";
 import SelectLanguage from "../../components/SelectLanguage";
 import ToggleMode from "../../components/ToggleMode";
 import AboutMe from "../../modules/aboutMe";
 import { getCurrentYear } from "../../utils/getCurrentYear";
+import PropTypes from "prop-types";
+
 const Home = ({ toggleMode }) => {
   return (
     <div className={`grid-home ${!toggleMode ? "light-mode" : "dark-mode"}`}>
@@ -33,5 +35,8 @@ const Home = ({ toggleMode }) => {
 const mapStateToProps = (state) => ({
   toggleMode: state.systemSettings.toggleMode,
 });
+Home.propTypes = {
+  toggleMode: PropTypes.bool.isRequired,
+};
 
 export default connect(mapStateToProps, {})(Home);

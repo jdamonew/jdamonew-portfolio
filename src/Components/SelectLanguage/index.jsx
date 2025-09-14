@@ -81,4 +81,4 @@ const mapDispatchToProps = (dispatch) =>
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps)(SelectLanguage); s
+    mapDispatchToProps)(SelectLanguage);

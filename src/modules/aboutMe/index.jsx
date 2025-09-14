@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { aboutMeTexts } from "../../configs/TranslatePackage";
+import { aboutMeTexts } from "../../Configs/TranslatePackage";
 import Tag from "../../components/General/Tag";
-import ImageBlob from "../../components/ImageBlob";
-import Socials from "../../components/Socials";
-import ModalContact from "../../components/ModalContact";
+import ImageBlob from "../../Components/ImageBlob";
+import Socials from "../../Components/Socials";
+import ModalContact from "../../Components/ModalContact";
+import PropTypes from "prop-types";
 
 const AboutMe = ({ toggleMode, language }) => {
   return (
@@ -12,9 +13,8 @@ const AboutMe = ({ toggleMode, language }) => {
       className={`about-me-contente ${toggleMode ? "dark-mode" : "light-mode"}`}
     >
       <div
-        className={`about-me-contente ${
-          toggleMode ? "dark-mode" : "light-mode"
-        } texts`}
+        className={`about-me-contente ${toggleMode ? "dark-mode" : "light-mode"
+          } texts`}
       >
         <Tag text={aboutMeTexts[language].tag} />
         <h1 className="about-me-title">{aboutMeTexts[language].title}</h1>
@@ -28,9 +28,8 @@ const AboutMe = ({ toggleMode, language }) => {
         />
       </div>
       <div
-        className={`about-me-contente ${
-          toggleMode ? "dark-mode" : "light-mode"
-        } images`}
+        className={`about-me-contente ${toggleMode ? "dark-mode" : "light-mode"
+          } images`}
       >
         <ImageBlob />
         <Socials />
@@ -43,5 +42,9 @@ const mapStateToProps = (state) => ({
   toggleMode: state.systemSettings.toggleMode,
   language: state.systemSettings.language,
 });
+AboutMe.propTypes = {
+  toggleMode: PropTypes.bool.isRequired,
+  language: PropTypes.string.isRequired,
+};
 
 export default connect(mapStateToProps, {})(AboutMe);
