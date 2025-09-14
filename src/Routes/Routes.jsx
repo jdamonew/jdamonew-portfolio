@@ -6,9 +6,10 @@ import posthog from "posthog-js";
 import Home from "../pages/home";
 
 function App() {
-  posthog.init("phc_dkTb8A3vzQILwk26wUJ7vSSJ5zUgVnyGqVNbmba1O7a", {
-    api_host: "https://app.posthog.com",
-  });
+
+  posthog.init(process.env.REACT_APP_POSTHOG_KEY, {
+    api_host: 'https://app.posthog.com'
+  })
 
   return (
     <Provider store={store}>

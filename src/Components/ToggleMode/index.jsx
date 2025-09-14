@@ -1,13 +1,20 @@
-import React from "react";
 import { Creators as SystemSettingsActions } from "../../store/ducks/systemSettings";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { Moon, Sun1 } from "iconsax-react";
+import { MoonIcon, Sun } from "lucide-react";
+import PropTypes from "prop-types";
+import "./style.scss";
+import posthog from "posthog-js";
 
-const ToggleMode = (props) => {
+const ToggleMode = ({ setModeSystem, toggleMode }) => {
+
   const setToggle = () => {
-    props.setModeSystem();
-  };
+    setModeSystem();
+
+    posthog.capture('change_mode', {
+      mode: toggleMode ? 'light' : 'dark'
+    })
+  }
 
   return (
     <label className="toggle-container">
@@ -15,15 +22,22 @@ const ToggleMode = (props) => {
         className="toggle"
         type="checkbox"
         onChange={setToggle}
-        checked={props.toggleMode}
+        checked={toggleMode}
       />
       <span className="slide">
-        <Moon size="16" color="#FFFFFF" variant="Broken" />
-        <Sun1 size="16" color="#FFFFFF" variant="Broken" />
+        <MoonIcon
+          size="18"
+          color="#FFFFFF"
+          variant="Broken"
+        />
+        <Sun
+          size="18"
+          color="#FFFFFF"
+        />
       </span>
     </label>
-  );
-};
+  )
+}
 
 const mapStateToProps = (state) => ({
   toggleMode: state.systemSettings.toggleMode,
@@ -32,4 +46,11 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators(SystemSettingsActions, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToggleMode);
+ToggleMode.propTypes = {
+  setModeSystem: PropTypes.func.isRequired,
+  toggleMode: PropTypes.bool.isRequired,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps)(ToggleMode);

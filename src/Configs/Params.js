@@ -1,7 +1,6 @@
 import {
   faLinkedin,
   faGithub,
-  faInstagram,
   faSpotify,
   faBehance,
 } from "@fortawesome/free-brands-svg-icons";
@@ -27,13 +26,6 @@ export const socials = [
     logo: faBehance,
     color: "#f8f8f8",
     url: "https://www.behance.net/jobiadamone",
-  },
-  {
-    id: 3,
-    name: "Instagram",
-    logo: faInstagram,
-    color: "#f8f8f8",
-    url: "https://www.instagram.com/jobia.jsx/",
   },
   {
     id: 5,

@@ -1,0 +1,32 @@
+@import "../../Configs/ColorsDefault.scss";
+
+.floating-menu{
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    z-Index: 1000;
+    background-color: $base-color;
+    padding: 10px;
+    border-radius: 99px;
+    height: 50px;
+
+
+    // width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 2rem;
+    
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}

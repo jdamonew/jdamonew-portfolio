@@ -1,12 +1,22 @@
-import React from "react";
-import { ArrowRight2 } from "iconsax-react";
 
-const Button = ({ children, onClick, appearence = "default" }) => {
+import PropTypes from 'prop-types';
+
+const Button = ({ children, onClick, appearence = "default", className, style }) => {
   return (
-    <button className={`button ${appearence}`} onClick={onClick}>
+    <button className={`button ${appearence} ${className}`} onClick={onClick} style={style} >
+
       {children}
+
     </button>
   );
 };
 
-export default Button;
+Button.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+  appearence: PropTypes.string,
+  className: PropTypes.string,
+  style: PropTypes.object,
+};
+
+export default Button

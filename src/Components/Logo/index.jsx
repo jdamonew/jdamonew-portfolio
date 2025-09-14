@@ -1,39 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-const Logo = ({ size, toggleMode }) => {
+const Logo = ({ toggleMode }) => {
   return (
-    <div>
-      <h1
-        className={`title-logo-top ${toggleMode ? "dark-mode" : "light-mode"}`}
-        style={{ fontSize: size }}
-      >
-        jóbia
+    <div className="logo-container">
+      <h1 className={`title-logo-top ${toggleMode ? "dark-mode" : "light-mode"}`} >
+        Jóbia
       </h1>
-      <h1
-        className={`title-logo-bottom ${
-          toggleMode ? "dark-mode" : "light-mode"
-        }`}
-        style={{ fontSize: size }}
-      >
-        damone
-        <span>.</span>
+      <h1 className={`title-logo-bottom ${toggleMode ? "dark-mode" : "light-mode"}`} >
+        Damone
       </h1>
     </div>
-  );
-};
+  )
+}
 
 Logo.propTypes = {
-  size: PropTypes.number,
-};
-
-Logo.defaultProps = {
-  size: 40,
+  toggleMode: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   toggleMode: state.systemSettings.toggleMode,
 });
 
-export default connect(mapStateToProps, {})(Logo);
+export default connect(
+  mapStateToProps,
+  {})(Logo);

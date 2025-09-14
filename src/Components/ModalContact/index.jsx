@@ -1,54 +1,70 @@
-import React, { useRef } from "react";
-import Button from "../General/Button";
-import { ChevronRight, X, AtSign, Phone, Linkedin, Github } from "lucide-react";
-import Title from "../General/Title";
+import { useRef } from "react";
+import { X, AtSign, Linkedin, SquareArrowOutUpRight, MessageCircle } from "lucide-react";
 import { contacts } from "../../configs/Params";
+import Button from "../General/Button";
+import { Whatsapp } from "iconsax-react";
+import PropTypes from "prop-types";
+import posthog from "posthog-js";
 
 const ModalContact = ({ text, data }) => {
+
   const modalRef = useRef();
 
-  const openModal = () => modalRef.current?.showModal();
+  const openModal = () => {
+    posthog.capture('contacts_open')
+    modalRef.current?.showModal()
+  };
   const closeModal = () => modalRef.current?.close();
+
+  function redirect(nameSocial) {
+    posthog.capture('contacts_open', {
+      socialName: nameSocial
+    })
+  }
 
   return (
     <>
-      <Button onClick={openModal}>
+      <Button onClick={openModal} className="button-contact" >
         <span>{text}</span>
-        <ChevronRight size="20" color="#FFF" />
+        <MessageCircle size="20" color="#FFF" />
       </Button>
 
       <dialog ref={modalRef} className="modal-container">
         <div className="modal-container_header">
-          <Title type="h3">{text}</Title>
+          <h3>{text}</h3>
           <X size="20" color="#000" onClick={closeModal} />
         </div>
         <div className="modal-container_body">
           <div className="contacts">
             <p>{data.modalMessage}</p>
             <div className="contacts_item">
-              <AtSign size="25" color="#F14040" />
-              <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
+              <AtSign size="30" />
+              <a
+                onClick={() => redirect('email')}
+                href={`mailto:${contacts.email}`}
+              >
+                {contacts.email}
+                <SquareArrowOutUpRight size={15} />
+              </a>
             </div>
             <div className="contacts_item">
-              <Phone size="25" color="#F14040" />
+              <Whatsapp size="30" />
               <a
+                onClick={() => redirect('whatsapp')}
                 href={`https://api.whatsapp.com/send?phone=5581996126534&text=Ol%C3%A1,%20estou%20vindo%20do%20seu%20site!%20Podemos%20conversar?`}
               >
                 {contacts.phone}
+                <SquareArrowOutUpRight size={15} />
               </a>
             </div>
             <div className="contacts_item">
-              <Linkedin size="25" color="#F14040" />
+              <Linkedin size="30" />
               <a
+                onClick={() => redirect('linkedin')}
                 href={`https://www.linkedin.com/${contacts.linkedin}-a376b0177/`}
               >
                 {contacts.linkedin}
-              </a>
-            </div>
-            <div className="contacts_item">
-              <Github size="25" color="#F14040" />
-              <a href={`https://github.com/${contacts.github}`}>
-                {contacts.github}
+                <SquareArrowOutUpRight size={15} />
               </a>
             </div>
           </div>
@@ -56,6 +72,13 @@ const ModalContact = ({ text, data }) => {
       </dialog>
     </>
   );
+};
+
+ModalContact.propTypes = {
+  text: PropTypes.string.isRequired,
+  data: PropTypes.shape({
+    modalMessage: PropTypes.string
+  }).isRequired
 };
 
 export default ModalContact;

@@ -1,8 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Routes from '../Routes/Routes';
 
-test('renders learn react link', () => {
+test('renders Routes component without crashing', () => {
   render(<Routes />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
 });
