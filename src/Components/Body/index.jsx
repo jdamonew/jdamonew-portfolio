@@ -17,7 +17,7 @@ const mapStateToProps = (state) => ({
 });
 
 Body.propTypes = {
-    toggleMode: PropTypes.func.isRequired,
+    toggleMode: PropTypes.bool.isRequired,
     language: PropTypes.string.isRequired,
 };
 

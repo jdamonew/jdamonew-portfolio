@@ -6,6 +6,7 @@ import { languagesOptions } from "../../Configs/TranslatePackage";
 import { useIsMobile } from "../../Hooks/useIsMobile";
 import { ChevronDown, Languages } from "lucide-react";
 import PropTypes from "prop-types";
+import posthog from "posthog-js";
 import "./style.scss";
 
 const SelectLanguage = ({ setLanguageSystem, language }) => {
@@ -13,6 +14,9 @@ const SelectLanguage = ({ setLanguageSystem, language }) => {
     const [open, setOpen] = React.useState(false);
 
     function changeLanguage(event) {
+        posthog.capture('change_language', {
+            language: event.value
+        })
         setLanguageSystem(event.value)
     }
 

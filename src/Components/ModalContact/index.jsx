@@ -7,9 +7,13 @@ import PropTypes from "prop-types";
 import posthog from "posthog-js";
 
 const ModalContact = ({ text, data }) => {
+
     const modalRef = useRef();
 
-    const openModal = () => modalRef.current?.showModal();
+    const openModal = () => {
+        posthog.capture('contacts_open')
+        modalRef.current?.showModal()
+    };
     const closeModal = () => modalRef.current?.close();
 
     function redirect(nameSocial) {

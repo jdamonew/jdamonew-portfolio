@@ -3,8 +3,17 @@ import Body from "../Components/Body";
 import Footer from "../Components/Footer";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import posthog from "posthog-js";
+import { useEffect } from "react";
 
 const Home = ({ toggleMode }) => {
+
+    useEffect(() => {
+        posthog.capture('page_view', {
+            page: 'home'
+        })
+    })
+
     return (
         <div className='grid-home'>
             <div className={`grid-home bg ${!toggleMode ? "light-mode" : "dark-mode"}`}></div>

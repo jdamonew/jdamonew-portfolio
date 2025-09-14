@@ -4,11 +4,16 @@ import { connect } from "react-redux";
 import { MoonIcon, Sun } from "lucide-react";
 import PropTypes from "prop-types";
 import "./style.scss";
+import posthog from "posthog-js";
 
 const ToggleMode = ({ setModeSystem, toggleMode }) => {
 
     const setToggle = () => {
-        setModeSystem()
+        setModeSystem();
+
+        posthog.capture('change_mode', {
+            mode: toggleMode ? 'light' : 'dark'
+        })
     }
 
     return (

@@ -10,8 +10,7 @@ const Socials = ({ toggleMode }) => {
     function redirect(url, nameSocial) {
         window.open(url, '_blank');
         posthog.capture('socials_open', {
-            socialName: nameSocial,
-            url: url
+            socialName: nameSocial
         })
     }
 

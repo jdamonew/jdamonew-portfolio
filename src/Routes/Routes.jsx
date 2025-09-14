@@ -11,16 +11,16 @@ import posthog from 'posthog-js'
 import Home from "../Pages/Home"
 
 function App() {
-  
-  posthog.init('phc_dkTb8A3vzQILwk26wUJ7vSSJ5zUgVnyGqVNbmba1O7a', { 
-    api_host: 'https://app.posthog.com' 
+
+  posthog.init(process.env.REACT_APP_POSTHOG_KEY, {
+    api_host: 'https://app.posthog.com'
   })
-  
+
   return (
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </Provider>

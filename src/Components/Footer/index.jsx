@@ -28,7 +28,7 @@ const mapStateToProps = (state) => ({
 });
 
 Footer.propTypes = {
-    toggleMode: PropTypes.func.isRequired,
+    toggleMode: PropTypes.bool.isRequired,
 };
 
 export default connect(
