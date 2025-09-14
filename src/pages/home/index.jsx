@@ -35,6 +35,7 @@ const Home = ({ toggleMode }) => {
 const mapStateToProps = (state) => ({
   toggleMode: state.systemSettings.toggleMode,
 });
+
 Home.propTypes = {
   toggleMode: PropTypes.bool.isRequired,
 };
