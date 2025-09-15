@@ -1,4 +1,4 @@
-@import "../Configs/ColorsDefault.scss";
+@import "../Configs/ColorsDefault";
 
 .footer-row-home{
     display: flex;
@@ -29,7 +29,7 @@
 }  
 
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
     .footer-row-home{
         margin-top: 50px;
 

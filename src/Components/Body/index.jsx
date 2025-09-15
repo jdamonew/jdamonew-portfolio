@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import AboutMe from '../../Modules/AboutMe';
+import AboutMe from '../../modules/AboutMe';
 import '../../Styles/Body.scss';
 
 const Body = ({ toggleMode, language }) => {

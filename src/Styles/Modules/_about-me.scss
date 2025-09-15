@@ -1,17 +1,16 @@
-@import "../../Configs/ColorsDefault.scss";
+@import "../../Configs/ColorsDefault";
 
 .about-me-content{
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeUp 1s ease forwards;
+    animation: fadeup 1s ease forwards;
     animation-delay: 0.5s; 
 
-     @keyframes fadeUp {
+     @keyframes fadeup{
         to {
             opacity: 1;
             transform: translateY(0);
@@ -65,11 +64,12 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
     .about-me-content{
         margin-top: 50px;
         flex-direction: column-reverse;
         gap: 40px;
+
         &_texts{
             .about-me-subtitle{
                     font-size: 25px;

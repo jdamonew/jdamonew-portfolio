@@ -1,4 +1,4 @@
-@import "../../Configs/ColorsDefault.scss";
+@import "../../Configs/ColorsDefault";
 
 .toggle-container{
     position: relative;
@@ -11,40 +11,33 @@
         width: 0;
         height: 0;   
         
-        &:checked + .slide{
+        &:checked + .slide::before {
+          transform: translateX(43px);
+          background-color: $system;
+        }
+        
+        &:checked + .slide {
             background-color: $base-color;
-            -webkit-box-shadow: rgba(0,0,0) 0px 4px 4px 3px;
-            -moz-box-shadow: rgba(0,0,0) 0px 4px 4px 3px;
-            box-shadow: rgb(0, 0, 0) 0px 4px 4px 3px;
-            
+            box-shadow: rgb(0 0 0) 0 4px 4px 3px;
         }
-        &:checked + .slide::before{
-            
-            transform: translateX(43px);
-            background-color: $system ;
-        }
+
+
     }
 
 
     .slide{
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
         cursor: pointer;
         background-color: $system;
         border-radius: 99px;
         transition: .4s;
-        -webkit-transition: .4s;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
         color: $white-default;
-        -webkit-box-shadow: #ae9ad8 0px 4px 4px 3px;
-        -moz-box-shadow: #ae9ad8 0px 4px 4px 3px;
-        box-shadow: #ae9ad8 0px 4px 4px 3px;
+        box-shadow: #ae9ad8 0 4px 4px 3px;
         
         &::before{
             content: "";
@@ -56,7 +49,6 @@
             background-color: $base-color;
             border-radius: 99px;
             transition: .4s;
-            -webkit-transition: .4s;
         }
     }
 

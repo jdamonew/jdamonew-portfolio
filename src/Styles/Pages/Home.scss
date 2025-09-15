@@ -7,7 +7,6 @@
     transition: .3s;
     display: flex;
     flex-direction: column;
-    flex-direction: column;
     align-items: center;
     
     &.bg{
@@ -20,8 +19,9 @@
         &.dark-mode{
             background-color:$system;
             opacity: 1;
-            background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 10px ), repeating-linear-gradient( #1e1e1e55, #1e1e1e );
+            background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000 10px ), repeating-linear-gradient( #1e1e1e55, #1e1e1e );
         }
+
         &.light-mode{
             background-color: #bd6df7;
             background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f2e3fd 10px ), repeating-linear-gradient( #926fdb55, #926fdb );
@@ -31,7 +31,7 @@
     
 }
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
     .grid-home{
         padding: 25px;
     }

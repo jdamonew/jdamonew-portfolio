@@ -1,4 +1,4 @@
-@import "../../Configs/ColorsDefault.scss";
+@import "../../Configs/ColorsDefault";
 
 .floating-menu{
     position: fixed;
@@ -17,14 +17,13 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
     font-size: 2rem;
     
     button{
         display: flex;
         align-items: center;
         justify-content: center;
-        
         width: 30px;
         height: 30px;
         border-radius: 50%;

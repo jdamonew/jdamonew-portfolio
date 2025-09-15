@@ -1,4 +1,4 @@
-    @import "../Variables/colors";
+    @import "../../Configs/ColorsDefault";
 
     .header-row-home{
         z-index: 9999;
@@ -30,7 +30,7 @@
     
 
 
-    @media (max-width: 1000px) {
+    @media (width <= 1000px) {
     .header-row-home{
         .header-container{
             h2{
